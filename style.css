@@ -1,6 +1,6 @@
 body  {
     height: 100%;
-    background-color: #4D7EA8;
+    background-color: #10253e;
     /* TEXT APPERARANCE AND SIZE */
     font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
@@ -8,17 +8,39 @@ body  {
     margin: 0;
   }
 
+  /* SECTION ANIMATION */
+  section {
+    transition: background-color 0.5s ease-in-out;
+    background: #101624;
+    height: fit-content;
+  }
+
+  #hero {
+    height: 100vb;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    justify-content: center;
+    align-items: center;
+  }
+
   header {
     height: 100px;
-    position: fixed;
     flex-wrap: wrap;
     justify-content: center;
     top: 0;
     left: 0;
     right: 0;
-    background: #152547;
+    background: #101624;
     box-shadow: 0 3px 7px -3px #101624;
     padding: 0 10px 0 10px;
+    position: fixed;
+    z-index: 1;
+    transition: background-color 0.5s ease-in-out;
+  }
+
+  header.background-transition {
+    background-color: #10253e;
   }
 
   @media only screen and (max-width: 960px) {
@@ -59,13 +81,27 @@ body  {
 
   #home {
     flex-flow: wrap;
-    padding: 242.4px 40px 142.4px 40px;
+    padding: 110px 40px 110px 40px;
     flex-direction: row;
     justify-content: space-around;
   }
 
   #intro {
     width: 400px;
+  }
+
+  .intro-text {
+    animation: slide-left 0.5s ease-in-out;
+  }
+
+
+  @keyframes slide-left {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
   }
 
   #avatar_img {
@@ -92,23 +128,24 @@ body  {
   }
 
 
-  #languages {
-    display: flex;
+  #skills {
+    text-align: center;
     justify-content: space-around;
     padding: 40px 0;
-    background: #152547;
-    box-shadow: 0 3px 7px -3px #101624, 0 -3px 7px -3px #101624;
+    background: #101624;
+    /* box-shadow: 0 3px 7px -3px #101624, 0 -3px 7px -3px #101624; */
   }
 
   #projects {
-    padding: 182.4px 0 172.4px 0;
+    padding: 110px 0 110px 0;
     text-align: center;
-    margin: 0px 0px 10px 0;
+    margin: auto;
   }
   #projects_menu { 
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    padding: 0;
   }
   .projects_examples {
     display: inline-block;
@@ -130,11 +167,11 @@ body  {
   
   #contact {
     flex-flow: wrap;
-    background:#152547;
+    background:#101624;
     justify-content: space-around;
     padding: 0 10px 0 10px;
     margin: auto;
-    box-shadow: 0 3px 7px -3px #101624, 0 -3px 7px -3px #101624;
+    /* box-shadow: 0 3px 7px -3px #101624, 0 -3px 7px -3px #101624; */
   }
   
   #contact div {
@@ -143,7 +180,7 @@ body  {
 
   #about {
     justify-content: space-around;
-    box-shadow: 0px -3px 7px -3px #101624;
+    /* box-shadow: 0px -3px 7px -3px #101624; */
   }
   i {
     font-size: 50px;
