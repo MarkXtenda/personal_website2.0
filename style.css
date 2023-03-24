@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   height: 100%;
   background-color: #10253e;
@@ -36,7 +40,7 @@ section {
 }
 
 header {
-  height: 100px;
+  height: 110px;
   top: 0;
   left: 0;
   right: 0;
@@ -46,6 +50,12 @@ header {
   position: fixed;
   z-index: 1;
   transition: background-color 0.5s ease-in-out;
+}
+
+header h2 {
+  margin: 10px 0 0 0;
+  display: flex;
+  align-self: center;
 }
 
 /* HEADER ANIMATION */
@@ -61,7 +71,7 @@ nav {
   align-items: center;
   justify-content: space-between;
   align-items: center;
-  padding: 30px;
+  padding: 0 30px;
   top: 0;
   left: 0;
   width: 100%;
@@ -69,16 +79,28 @@ nav {
 }
 
 nav a {
+  font-weight: bold;
   font-size: 18px;
-  /* color: #111; */
-  /* text-decoration: none; */
-  /* padding: 15px 10px;
-    margin-right: 20px; */
 }
 
 .menu-toggle {
   display: none;
   cursor: pointer;
+  background-color: transparent;
+  border: none;
+  transition: transform 0.3s ease-in-out;
+}
+
+.menu-toggle.active .bar:nth-child(1) {
+  transform: rotate(-45deg) translate(-11px, 6px);
+}
+
+.menu-toggle.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.active .bar:nth-child(3) {
+  transform: rotate(45deg) translate(-11px, -6px);
 }
 
 .bar {
@@ -86,13 +108,13 @@ nav a {
   width: 30px;
   height: 4px;
   margin: 8px 0;
-  background-color: #111;
+  background-color: white;
   transition: transform 0.3s ease-out;
 }
 
 .menu-overlay {
-  top: 0;
-  left: 0;
+  position: absolute;
+  top: 110px;
   width: 100%;
   height: 70vh;
   display: none;
@@ -107,7 +129,6 @@ nav a {
 
 .menu-overlay a {
   font-size: 25px;
-  text-decoration: none;
   padding: 10px 10px;
   margin-bottom: 20px;
 }
@@ -123,7 +144,7 @@ nav a {
 
   .menu-overlay {
     display: none;
-    transform: translateX(100%);
+    transform: translateX(110%);
   }
 
   .menu-overlay.show {
@@ -245,7 +266,7 @@ nav a {
   background-color: #101624;
   width: 300px;
   animation: none;
-  height: 300px;
+  height: 320px;
   padding: 20px;
 }
 

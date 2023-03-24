@@ -13,7 +13,6 @@ menuToggle.addEventListener('click', () => {
   menuOverlay.classList.toggle('show');
 });
 
-
 window.addEventListener('scroll', () => {
     const scrollPos = window.scrollY;
     if (scrollPos > 0) {
