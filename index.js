@@ -8,15 +8,24 @@ const menuToggle = document.querySelector('.menu-toggle');
 const menuOverlay = document.querySelector('.menu-overlay');
 
 menuToggle.addEventListener('click', () => {
-  menuToggle.classList.toggle('active');
-  menuOverlay.style.display='flex';
-  menuOverlay.classList.toggle('show');
+    menuOverlay.style.transition = 'transform 0.3s ease-out';
+    menuToggle.classList.toggle('active');
+    menuOverlay.style.display='flex';
+    menuOverlay.classList.toggle('show');
 });
+
+menuOverlay.addEventListener('click', () => {
+    menuOverlay.style.transition = 'transform 0.3s ease-out';
+    menuToggle.classList.toggle('active');
+    menuOverlay.classList.toggle('show');
+})
 
 window.addEventListener('scroll', () => {
     const scrollPos = window.scrollY;
     if (scrollPos > 0) {
         header.classList.add('background-transition')
+        menuOverlay.style.transition = 'background-color 0.5s ease-in-out'
+        menuOverlay.style.background = lightColor
 
         sections.forEach(element => {
             let elementCoordinates = element.getBoundingClientRect()
@@ -32,10 +41,9 @@ window.addEventListener('scroll', () => {
 
     }
     else {
-        console.log(header.children)
-        
         header.classList.remove('background-transition')
-        hero.style.background = "#101624"
+        menuOverlay.style.background = darkColor;
+        hero.style.background = darkColor;
     }
   });
   
