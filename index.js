@@ -4,6 +4,16 @@ const sections = document.querySelectorAll('section')
 const darkColor = "#101624"
 const lightColor = "#10253e"
 
+const menuToggle = document.querySelector('.menu-toggle');
+const menuOverlay = document.querySelector('.menu-overlay');
+
+menuToggle.addEventListener('click', () => {
+  menuToggle.classList.toggle('active');
+  menuOverlay.style.display='flex';
+  menuOverlay.classList.toggle('show');
+});
+
+
 window.addEventListener('scroll', () => {
     const scrollPos = window.scrollY;
     if (scrollPos > 0) {
@@ -11,10 +21,7 @@ window.addEventListener('scroll', () => {
 
         sections.forEach(element => {
             let elementCoordinates = element.getBoundingClientRect()
-            if (elementCoordinates.top < 200 && elementCoordinates.bottom > 200) {
-                if (element.querySelector(".appear")) {
-                    
-                }
+            if (elementCoordinates.top < 300 && elementCoordinates.bottom > 300) {
                 element.style.boxShadow = `0 3px 7px -3px ${lightColor}, 0 -3px 7px -3px ${lightColor}`
                 element.style.background = lightColor
             }
@@ -26,6 +33,8 @@ window.addEventListener('scroll', () => {
 
     }
     else {
+        console.log(header.children)
+        
         header.classList.remove('background-transition')
         hero.style.background = "#101624"
     }

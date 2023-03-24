@@ -1,218 +1,340 @@
-body  {
-    height: 100%;
-    background-color: #10253e;
-    /* TEXT APPERARANCE AND SIZE */
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 20px;
-    color: white;
-    margin: 0;
+body {
+  height: 100%;
+  background-color: #10253e;
+  /* TEXT APPERARANCE AND SIZE */
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  color: white;
+  margin: 0;
+}
+
+/* SECTION ANIMATION */
+section {
+  transition: background-color 0.5s ease-in-out;
+  background: #101624;
+  height: fit-content;
+}
+
+/* SECTION ANIMATION */
+
+#hero {
+  height: 100vb;
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+  justify-content: center;
+  align-items: center;
+}
+.click-button {
+  margin: 10px;
+  padding: 10px;
+  background-color: #10253e;
+}
+
+.click-button:hover {
+  animation: pulse-button 1500ms infinite;
+}
+
+header {
+  height: 100px;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #101624;
+  box-shadow: 0 3px 7px -3px #101624;
+  padding: 0 10px 0 10px;
+  position: fixed;
+  z-index: 1;
+  transition: background-color 0.5s ease-in-out;
+}
+
+/* HEADER ANIMATION */
+header.background-transition {
+  background-color: #10253e;
+}
+
+/* HEADER ANIMATION */
+
+/* NAVBAR */
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+nav a {
+  font-size: 18px;
+  /* color: #111; */
+  /* text-decoration: none; */
+  /* padding: 15px 10px;
+    margin-right: 20px; */
+}
+
+.menu-toggle {
+  display: none;
+  cursor: pointer;
+}
+
+.bar {
+  display: block;
+  width: 30px;
+  height: 4px;
+  margin: 8px 0;
+  background-color: #111;
+  transition: transform 0.3s ease-out;
+}
+
+.menu-overlay {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70vh;
+  display: none;
+  flex-direction: column;
+  align-items: end;
+  justify-content: center;
+  z-index: 99;
+  background: #10253e;
+  transform: translateX(100%);
+  transition: transform 0.3s ease-out;
+}
+
+.menu-overlay a {
+  font-size: 25px;
+  text-decoration: none;
+  padding: 10px 10px;
+  margin-bottom: 20px;
+}
+
+@media screen and (max-width: 750px) {
+  header nav {
+    display: none;
   }
 
-  /* SECTION ANIMATION */
-  section {
-    transition: background-color 0.5s ease-in-out;
-    background: #101624;
-    height: fit-content;
+  .menu-toggle {
+    display: block;
   }
 
-  #hero {
-    height: 100vb;
-    display: flex;
-    flex-direction: column;
-    overflow: auto;
-    justify-content: center;
-    align-items: center;
+  .menu-overlay {
+    display: none;
+    transform: translateX(100%);
   }
 
-  header {
-    height: 100px;
-    flex-wrap: wrap;
-    justify-content: center;
-    top: 0;
-    left: 0;
-    right: 0;
-    background: #101624;
-    box-shadow: 0 3px 7px -3px #101624;
-    padding: 0 10px 0 10px;
-    position: fixed;
-    z-index: 1;
-    transition: background-color 0.5s ease-in-out;
+  .menu-overlay.show {
+    transform: translateX(0);
   }
+}
 
-  header.background-transition {
-    background-color: #10253e;
-  }
+/* NAVBAR */
 
-  @media only screen and (max-width: 960px) {
-    header {
-      height: 200px;
-    }
+#home_button {
+  display: flex;
+  align-items: center;
+  padding-right: 50px;
+  padding-left: 50px;
+}
 
-    nav {  
-      font-size: 15px;
-    }
+#home_button>a {
+  color: white;
+}
 
-  }
-  #home_button  {
-    display: flex;
-    align-items: center;
-    padding-right: 50px;
-    padding-left: 50px;
-  }
-
-  #home_button > a {
-    color: white;
-  }
-  #home_button >a:hover {
-    background: 
+#home_button>a:hover {
+  background:
     linear-gradient(90deg, #DC3F3D, #E65F5C);
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: white;
-    transition: filter 800ms;
-  }
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: white;
+  transition: filter 800ms;
+}
 
-  
+/*   
   header nav {
     display: flex;
     align-items: center;
     right: 10%;
-  }
+  } */
 
-  #home {
-    flex-flow: wrap;
-    padding: 110px 40px 110px 40px;
-    flex-direction: row;
-    justify-content: space-around;
-  }
+#home {
+  padding: 110px 40px 110px 40px;
+  flex-direction: row;
+  justify-content: space-around;
+}
 
-  #intro {
-    width: 400px;
-  }
+#intro {
+  width: 400px;
+}
 
-  .intro-text {
-    animation: slide-left 0.5s ease-in-out;
-  }
-
-
-  @keyframes slide-left {
-    0% {
-      transform: translateX(-100%);
-    }
-    100% {
-      transform: translateX(0);
-    }
-  }
-
-  #avatar_img {
-    /* PULSING EFFECT ON IMAGE */
-    border-radius: 50%;
-    background-color: #101624;
-    animation: pulse 1500ms infinite;
-  }
-
-  #avatar_img:hover {
-    /* PULSING EFFECT DISSAPEARENCE WHILE HOVERING */
-    background-color: transparent;
-    animation: none;
-  }
-
-  /* PULSING EFFECT KEYFRAMES */
-  @keyframes pulse {
-    0% {
-      box-shadow: #101624 0 0 0 0;
-    }
-    75% {
-      box-shadow: #10162400 0 0 0 16px;
-    }
-  }
+.intro-text {
+  animation: slide-left 0.5s ease-in-out;
+}
 
 
-  #skills {
-    text-align: center;
-    justify-content: space-around;
-    padding: 40px 0;
-    background: #101624;
-    /* box-shadow: 0 3px 7px -3px #101624, 0 -3px 7px -3px #101624; */
+@keyframes slide-left {
+  0% {
+    transform: translateX(-100%);
   }
 
-  #projects {
-    padding: 110px 0 110px 0;
-    text-align: center;
-    margin: auto;
+  100% {
+    transform: translateX(0);
   }
-  #projects_menu { 
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    padding: 0;
-  }
-  .projects_examples {
-    display: inline-block;
-    margin: 15px;
-    background-color: #101624;
-    width: 300px;
-    animation: none;
-    height: 300px;
-    padding: 20px;
-  }
-  .projects_examples:hover {
-    /* PULSING EFFECT ON PROJECT EXAMPLES*/
-    background-color: #101624;
-    animation: pulse 1500ms infinite;
-  }
-  nav a {
-    padding: 10px;
-  }
-  
-  #contact {
-    flex-flow: wrap;
-    background:#101624;
-    justify-content: space-around;
-    padding: 0 10px 0 10px;
-    margin: auto;
-    /* box-shadow: 0 3px 7px -3px #101624, 0 -3px 7px -3px #101624; */
-  }
-  
-  #contact div {
-    padding: 20px;
+}
+
+#avatar_img {
+  /* PULSING EFFECT ON IMAGE */
+  border-radius: 50%;
+  background-color: #101624;
+  animation: pulse 1500ms infinite;
+}
+
+#avatar_img:hover {
+  /* PULSING EFFECT DISSAPEARENCE WHILE HOVERING */
+  background-color: transparent;
+  animation: none;
+}
+
+/* PULSING EFFECT KEYFRAMES */
+@keyframes pulse {
+  0% {
+    box-shadow: #101624 0 0 0 0;
   }
 
-  #about {
-    justify-content: space-around;
-    /* box-shadow: 0px -3px 7px -3px #101624; */
+  75% {
+    box-shadow: #10162400 0 0 0 16px;
   }
-  i {
-    font-size: 50px;
-  }
-  a {
-    color: white;
-    text-decoration: none;
-    background-image: linear-gradient(#4D7EA8, #152547);
-    background-repeat: no-repeat;
-    background-size: 0 100%;
-    background-position-x: right;
+}
 
-    transition: background-size 500ms;
+@keyframes pulse-button {
+  0% {
+    box-shadow: #10253e 0 0 0 0;
   }
 
-  a:hover {
-    /* LINK ANIMATION */
-    background-size: 100% 100%;
-    background-position-x: left;
+  75% {
+    box-shadow: #10253e00 0 0 0 16px;
   }
+}
 
-  #intro, #home img, #projects_menu {
-    margin: 20px;
-  }
-  #intro h1, #projects h1 {
-    margin-bottom: 60px;
-  }
-  #about, header, #home, #contact, #about{
-    display: flex;
-  }
 
-  input { 
-    height: 20px;
-  }
+#skills {
+  text-align: center;
+  justify-content: space-around;
+  padding: 40px 0;
+  background: #101624;
+  /* box-shadow: 0 3px 7px -3px #101624, 0 -3px 7px -3px #101624; */
+}
 
+#projects {
+  padding: 110px 0 110px 0;
+  text-align: center;
+  margin: auto;
+}
+
+#projects_menu {
+  display: flex;
+  padding: 0;
+}
+
+.projects_examples {
+  display: inline-block;
+  margin: 15px;
+  background-color: #101624;
+  width: 300px;
+  animation: none;
+  height: 300px;
+  padding: 20px;
+}
+
+.projects_examples>a {
+  bottom: 0;
+}
+
+.projects_examples:hover {
+  /* PULSING EFFECT ON PROJECT EXAMPLES*/
+  background-color: #101624;
+  animation: pulse 1500ms infinite;
+}
+
+nav a {
+  padding: 10px;
+}
+
+#contact {
+  background: #101624;
+  justify-content: space-around;
+  padding: 0 10px 0 10px;
+  margin: auto;
+  /* box-shadow: 0 3px 7px -3px #101624, 0 -3px 7px -3px #101624; */
+}
+
+#contact div {
+  padding: 20px;
+}
+
+#about {
+  justify-content: space-around;
+  /* box-shadow: 0px -3px 7px -3px #101624; */
+}
+
+.language_icons {
+  flex-direction: column;
+  padding: 30px;
+}
+
+i {
+  padding: 10px;
+  font-size: 50px;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  background-image: linear-gradient(#4D7EA8, #152547);
+  background-repeat: no-repeat;
+  background-size: 0 100%;
+  background-position-x: right;
+
+  transition: background-size 500ms;
+}
+
+a:hover {
+  /* LINK ANIMATION */
+  background-size: 100% 100%;
+  background-position-x: left;
+}
+
+#intro,
+#home img,
+#projects_menu {
+  margin: 20px;
+}
+
+#intro h1,
+#projects h1 {
+  margin-bottom: 60px;
+}
+
+header,
+#hero,
+#home,
+.skillset,
+.language_icons,
+#contact,
+#about {
+  display: flex;
+}
+
+header, #home, .skillset, #projects_menu, #contact {
+  flex-flow: wrap;
+  justify-content: center;
+}
+
+
+
+input {
+  height: 20px;
+}

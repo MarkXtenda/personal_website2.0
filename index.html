@@ -13,24 +13,36 @@
 <body>
     <!--HEADER-->
     <header>
-      <h1><a id="home_button" href="#home">Mark Kholodii</a></h1>
+      <h3><a id="home_button" href="#hero">Mark Kholodii</a></h3>
     <!--SCROLLBAR-->
       <nav>
+        <a href="#home">About me</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a> 
+        <a href="https://github.com/MarkXtenda" target="_blank">GitHub</a> 
+        <a href="https://medium.com/@mark.zapas1" target="_blank">Blog</a> 
+        <a href="#contact">Contact</a> 
+      </nav>
+      <button class="menu-toggle">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+      <div class="menu-overlay">
         <a href="#home">Home</a>
         <a href="#skills">Skills</a>
         <a href="#projects">Projects</a> 
-        <a href="https://github.com/MarkXtenda">GitHub</a> 
-        <a href="https://medium.com/@mark.zapas1">Blog</a> 
+        <a href="https://github.com/MarkXtenda" target="_blank">GitHub</a> 
+        <a href="https://medium.com/@mark.zapas1" target="_blank">Blog</a> 
         <a href="#contact">Contact</a> 
-        <a href="#about">About</a>
-      </nav>
+      </div>
     </header>
     <section id="hero">
       <h1>Hi, my name is Mark</h1>
       <p class="intro-text">I am a full-stack software engineer</p>
       <div>
-        <a href="#home">About me</a>
-        <a href="resume.pdf" download>My Resume</a>
+        <a class="click-button" href="#home">About me</a>
+        <a class="click-button" target="_blank" href="resume.pdf" download>My Resume</a>
       </div>
       
     </section>
@@ -49,12 +61,28 @@
     <section id="skills">
       <h1>Skillset</h1>
       <div>
-        <div>Front-End Development</div>
-        <div>HTML/CSS, Javascript, TypeScript, React</div>
-        <div>Back-End Development</div>
-        <div>SQL, Ruby, Ruby on Rails</div>
-        <div>Tools</div>
-        <div>Git, Bash, Visual Studio Code</div>
+        <h4>Front-End Development</h4>
+        <div class="skillset">
+          <div class="language_icons"><i class="devicon-html5-plain-wordmark"></i>HTML</div>
+          <div class="language_icons"><i class="devicon-css3-plain-wordmark"></i>CSS</div>
+          <div class="language_icons"><i class="devicon-javascript-plain"></i>Javascript</div>
+          <div class="language_icons"><i class="devicon-typescript-plain"></i>TypeScript</div>
+          <div class="language_icons"><i class="devicon-react-original"></i>React</div>
+        </div>
+        <h4>Back-End Development</h4>
+        <div class="skillset">
+          <div class="language_icons"><i class="devicon-mysql-plain"></i>MySQL</div>
+          <div class="language_icons"><i class="devicon-ruby-plain-wordmark"></i>Ruby</div>
+          <div class="language_icons"><i class="devicon-rails-plain-wordmark"></i>Ruby on Rails</div>
+          <div class="language_icons"><i class="devicon-c-plain"></i>C</div>
+        </div>
+        <h4>Tools</h4>
+        <div class="skillset">
+          <div class="language_icons"><i class="devicon-bash-plain"></i>Bash</div>
+          <div class="language_icons"><i class="devicon-github-original-wordmark"></i>Git</div>
+          <div class="language_icons"><i class="devicon-linux-plain"></i>Linux</div>
+          <div class="language_icons"><i class="devicon-visualstudio-plain"></i>VS Code</div>
+        </div>
         <div>...</div>
         <!-- <div class="language_icons"><i class="devicon-html5-plain-wordmark"></i></div>
         <div class="language_icons"><i class="devicon-css3-plain-wordmark"></i></div>
@@ -70,10 +98,40 @@
     <section id="projects">
         <h1>Projects I have worked on</h1>
         <menu id="projects_menu">
-          <div class="projects_examples"><i class="devicon-javascript-plain"></i><a href="https://anime-search-by-mark.netlify.app/"><h3>Anime Search</h3><p>simple Anime Search webpage that allows users to search for and view information about various anime shows.</p></a></div>
-          <div class="projects_examples"><i class="devicon-react-original-wordmark"></i><a href="https://giphy-clone-by-mark.netlify.app/"><h3>Giphy Clone</h3><p>A simple application that allows users to search and view various GIFs using Giphy.com API.</p></a></div>
-          <div class="projects_examples"><i class="devicon-ruby-plain-wordmark"></i><a href="https://github.com/MarkXtenda/Dog-Facts"><h3>DogFacts Ruby Application</h3><p>This CLI Ruby application fetches 5 random dog facts from the DogFacts API and allows the user to save any of these facts as their favourites for later reading.</p></a></div>
-          <div class="projects_examples"><i class="devicon-rails-plain-wordmark"></i><a href="https://github.com/MarkXtenda/instagram-clone"><h3>InstaClone</h3><p>A clone of the popular social media platform Instagram.</p></a></div>
+          <div class="projects_examples">
+            <i class="devicon-javascript-plain"></i>
+            <h3>Anime Search</h3>
+            <p>simple Anime Search webpage that allows users to search for and view information about various anime shows.</p>
+            <div class="demo-code">
+              <a class="click-button" href="https://anime-search-by-mark.netlify.app/">Demo</a>
+              <a class="click-button">Code</a>
+            </div>
+          </div>
+          <div class="projects_examples">
+            <i class="devicon-react-original-wordmark"></i>
+            <h3>Giphy Clone</h3>
+            <p>A simple application that allows users to search and view various GIFs using Giphy.com API.</p>
+            <div class="demo-code">
+              <a class="click-button" href="https://giphy-clone-by-mark.netlify.app/">Demo</a>
+              <a class="click-button">Code</a>
+            </div>
+          </div>
+          <div class="projects_examples">
+            <i class="devicon-ruby-plain-wordmark"></i>
+            <h3>DogFacts Ruby Application</h3>
+            <p>This CLI Ruby application fetches 5 random dog facts from the DogFacts API and allows the user to save any of these facts as their favourites for later reading.</p>
+            <div class="demo-code">
+              <a class="click-button" href="https://github.com/MarkXtenda/Dog-Facts" target="_blank">Code</a>
+            </div>
+          </div>
+          <div class="projects_examples">
+            <i class="devicon-rails-plain-wordmark"></i>
+            <h3>InstaClone</h3>
+            <p>A clone of the popular social media platform Instagram.</p>
+            <div class="demo-code">
+              <a class="click-button" href="https://github.com/MarkXtenda/instagram-clone" target="_blank">Code</a>
+            </div>
+          </div>
         </menu>
     </section>
     <!--CONTACT BAR-->
@@ -82,8 +140,8 @@
         <h3>Contact</h3>
         <p>
           <a href="mailto:kholodii.mark@gmail.com">kholodii.mark@gmail.com</a><br>
-          <a href="https://www.facebook.com/mark.kholodiy">Facebook</a><br>
-          <a href="https://www.linkedin.com/in/mark-kholodii-8333a8266/">LinkedIn</a><br>
+          <a href="https://www.facebook.com/mark.kholodiy" target="_blank">Facebook</a><br>
+          <a href="https://www.linkedin.com/in/mark-kholodii-8333a8266/" target="_blank">LinkedIn</a><br>
         </p>
       </div>
       
