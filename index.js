@@ -3,6 +3,7 @@ const hero = document.querySelector("#hero")
 const sections = document.querySelectorAll('section')
 const darkColor = "#101624"
 const lightColor = "#10253e"
+const moveUp = document.querySelector('#move-up')
 
 const menuToggle = document.querySelector('.menu-toggle');
 const menuOverlay = document.querySelector('.menu-overlay');
@@ -26,6 +27,7 @@ window.addEventListener('scroll', () => {
         header.classList.add('background-transition')
         menuOverlay.style.transition = 'background-color 0.5s ease-in-out'
         menuOverlay.style.background = lightColor
+        moveUp.style.display = 'block'
 
         sections.forEach(element => {
             let elementCoordinates = element.getBoundingClientRect()
@@ -44,6 +46,7 @@ window.addEventListener('scroll', () => {
         header.classList.remove('background-transition')
         menuOverlay.style.background = darkColor;
         hero.style.background = darkColor;
+        moveUp.style.display = 'none'
     }
   });
   

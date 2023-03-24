@@ -21,6 +21,28 @@ section {
 
 /* SECTION ANIMATION */
 
+#move-up {
+  display: none;
+  position: fixed;
+  top: 80vh;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: solid 2px white;
+  text-align: center;
+  line-height: 50px;
+}
+
+
+#move-up .arrow {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-right: 2px solid;
+    border-top: 2px solid;
+    transform: rotate(-45deg); 
+}
+
 #hero {
   height: 100vb;
   display: flex;
@@ -45,7 +67,6 @@ header {
   left: 0;
   right: 0;
   background: #101624;
-  box-shadow: 0 3px 7px -3px #101624;
   padding: 0 10px 0 10px;
   position: fixed;
   z-index: 1;
@@ -316,6 +337,10 @@ a:hover {
   /* LINK ANIMATION */
   background-size: 100% 100%;
   background-position-x: left;
+}
+
+header #move-up {
+  box-shadow: 0 3px 7px -3px #101624;
 }
 
 #intro,
