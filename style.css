@@ -14,6 +14,7 @@ body {
 
 /* SECTION ANIMATION */
 section {
+  padding: 40px 0;
   transition: background-color 0.5s ease-in-out;
   background: #101624;
   height: fit-content;
@@ -196,7 +197,6 @@ nav a {
 }
 
 #home {
-  padding: 110px 40px 110px 40px;
   flex-direction: row;
   justify-content: space-around;
 }
@@ -258,12 +258,10 @@ nav a {
 #skills {
   text-align: center;
   justify-content: space-around;
-  padding: 40px 0;
   background: #101624;
 }
 
 #projects {
-  padding: 110px 0 110px 0;
   text-align: center;
   margin: auto;
 }
@@ -297,13 +295,6 @@ nav a {
   padding: 10px;
 }
 
-#contact {
-  background: #101624;
-  justify-content: space-around;
-  padding: 0 10px 0 10px;
-  margin: auto;
-}
-
 #correspondence {
   display: flex;
   flex-direction: column;
@@ -320,6 +311,7 @@ form {
 }
 
 #about {
+  background: #10253e;
   justify-content: space-around;
 }
 
