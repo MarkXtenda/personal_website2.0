@@ -8,6 +8,8 @@ const moveUp = document.querySelector('#move-up')
 const menuToggle = document.querySelector('.menu-toggle');
 const menuOverlay = document.querySelector('.menu-overlay');
 
+AOS.init();
+
 menuToggle.addEventListener('click', () => {
     menuOverlay.style.transition = 'transform 0.3s ease-out';
     menuToggle.classList.toggle('active');

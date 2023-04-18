@@ -2,13 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <script defer src="index.js"></script>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.14.0/devicon.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="fonts" href="./fonts/Roboto-Regular.ttf">
+    <script defer src="index.js"></script>
     <title>Mark Kholodii</title>
+    <link rel="icon" type="image/png" href="images/letter-m.png">
 </head>
 <body>
     <!--HEADER-->
@@ -41,19 +43,25 @@
     <a id="move-up" class="click-button projects_examples" href="#hero">
       <span class="arrow"></span>
     </a>
-    <section id="hero">
-      <h1>Hi, my name is Mark</h1>
-      <p class="intro-text">I am a full-stack software engineer</p>
-      <div>
+    <section id="hero" >
+      <div id="hero-container">
+      <h1 data-aos="fade-in" 
+      data-aos-offset="100" 
+      data-aos-duration="500" 
+      data-aos-easing="ease-in-out"
+      data-aos-once="false">Hi, my name is Mark</h1>
+      <p class="intro-text" data-aos="fade-up">I am a full-stack software engineer</p>
+      <div data-aos="fade-up">
         <a class="click-button" href="#home">About me</a>
         <a class="click-button" target="_blank" href="resume.pdf" download>My Resume</a>
       </div>
+    </div>
     </section>
     <!--HOME-->
     <section id="home">
       <div id="intro">
         <h1>About me</h1>
-        <p class="intro-text">I am an aspiring full-stack software engineer. Recent online course graduate with a focus on HTML/CSS, Javascript, React, SQL, and Ruby on Rails.<br><br>
+        <p class="intro-text" data-aos="fade-up">I am an aspiring full-stack software engineer. Recent online course graduate with a focus on HTML/CSS, Javascript, React, SQL, and Ruby on Rails.<br><br>
           As a graduate full stack engineer, I plan to expand my knowledge and learn in-depth the software and languages commonly used by professionals in the software development industry. 
           Some examples are provided below.</p>
       </div>
@@ -64,8 +72,8 @@
     <section id="skills">
       <h1>Skillset</h1>
       <div>
-        <h4>Front-End Development</h4>
-        <div class="skillset">
+        <h4 data-aos="fade-up">Front-End Development</h4>
+        <div class="skillset" data-aos="fade-up">
           <div class="language_icons"><i class="devicon-html5-plain-wordmark"></i>HTML</div>
           <div class="language_icons"><i class="devicon-css3-plain-wordmark"></i>CSS</div>
           <div class="language_icons"><i class="devicon-bootstrap-plain"></i>Bootstrap</div>
@@ -74,15 +82,15 @@
           <div class="language_icons"><i class="devicon-react-original"></i>React</div>
           <div class="language_icons"><i class="devicon-redux-original"></i>Redux</div>
         </div>
-        <h4>Back-End Development</h4>
-        <div class="skillset">
+        <h4 data-aos="fade-up">Back-End Development</h4>
+        <div class="skillset" data-aos="fade-up">
           <div class="language_icons"><i class="devicon-c-plain"></i>C</div>
           <div class="language_icons"><i class="devicon-mysql-plain"></i>MySQL</div>
           <div class="language_icons"><i class="devicon-ruby-plain-wordmark"></i>Ruby</div>
           <div class="language_icons"><i class="devicon-rails-plain-wordmark"></i>Ruby on Rails</div>
         </div>
-        <h4>Tools</h4>
-        <div class="skillset">
+        <h4 data-aos="fade-up">Tools</h4>
+        <div class="skillset" data-aos="fade-up">
           <div class="language_icons"><i class="devicon-bash-plain"></i>Bash</div>
           <div class="language_icons"><i class="devicon-git-plain"></i></i>Git</div>
           <div class="language_icons"><i class="devicon-linux-plain"></i>Linux</div>
@@ -95,7 +103,7 @@
     <section id="projects">
         <h1>Projects I have worked on</h1>
         <menu id="projects_menu">
-          <div class="projects_examples">
+          <div class="projects_examples" data-aos="fade-up">
             <i class="devicon-javascript-plain"></i>
             <h3>Anime Search</h3>
             <p>simple Anime Search webpage that allows users to search for and view information about various anime shows.</p>
@@ -104,7 +112,7 @@
               <a class="click-button" target="_blank">Code</a>
             </div>
           </div>
-          <div class="projects_examples">
+          <div class="projects_examples" data-aos="fade-up">
             <i class="devicon-react-original-wordmark"></i>
             <h3>Giphy Clone</h3>
             <p>A simple application that allows users to search and view various GIFs using Giphy.com API.</p>
@@ -113,7 +121,7 @@
               <a class="click-button" target="_blank">Code</a>
             </div>
           </div>
-          <div class="projects_examples">
+          <div class="projects_examples" data-aos="fade-up">
             <i class="devicon-ruby-plain-wordmark"></i>
             <h3>DogFacts Ruby Application</h3>
             <p>This CLI Ruby application fetches 5 random dog facts from the DogFacts API and allows the user to save any of these facts as their favourites for later reading.</p>
@@ -121,7 +129,7 @@
               <a class="click-button" href="https://github.com/MarkXtenda/Dog-Facts" target="_blank">Code</a>
             </div>
           </div>
-          <div class="projects_examples">
+          <div class="projects_examples" data-aos="fade-up">
             <i class="devicon-react-original-wordmark"></i>
             <i class="devicon-rails-plain-wordmark"></i>
             <h3>InstaClone</h3>
@@ -170,5 +178,12 @@
     <p>
       Designed & developed by Mark Kholodii
     </p></section>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        offset: 150,
+        duration: 800
+      });
+    </script>
   </body>
 </html>
