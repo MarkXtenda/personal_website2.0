@@ -155,13 +155,6 @@ nav a {
   margin-bottom: 20px;
 }
 
-#hero-container {
-padding-top: 50px;
-display: flex;
-flex-direction: column;
-align-items: center;
-}
-
 @media screen and (max-width: 750px) {
   header nav {
     display: none;
@@ -213,8 +206,15 @@ align-items: center;
 }
 
 .intro-text {
-  padding: 25px;
+  padding: 10px;
+  margin: 15px;
 }
+
+#hero-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  }
 
 #avatar_img {
   object-fit: contain;
